@@ -224,11 +224,11 @@ function Soundoff() {
 function FullscreenFn() {
     if (video.requestFullscreen) {
         video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) { // 兼容火狐
+    } else if (video.mozRequestFullScreen) { 
         video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) { // 兼容Chrome和Safari
+    } else if (video.webkitRequestFullscreen) { 
         video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) { // 兼容IE11
+    } else if (video.msRequestFullscreen) { 
         video.msRequestFullscreen();
     }
 }
