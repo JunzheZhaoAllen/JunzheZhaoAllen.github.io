@@ -4,8 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>This is my Assignment2</title> 
-  <link rel="stylesheet" href="./css/css.css">
+<style type="text/css">
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+.wqw {
+  display: block;
+  width: 1200px;
+  margin: 10px auto;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin-right: 40px;
+}
+nav ul a {
+  color: #555;
+  text-decoration: none;
+  font-size: 24px;
+}
+nav ul a:hover {
+  color: #ff6a6a;
+}
+.container {
+  width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  width: 260px;
+  height: 400px;
+  border-right: 1px solid black;
+  cursor: pointer;
+}
+#custom-video-player {
+  background: url(../img/bj.webp);
+  background-repeat: no-repeat;
+}
+.uls li {
+  line-height: 28px;
+  padding-left: 20px;
+  list-style: none;
+}
+.uls li:hover {
+  background-color: bisque;
+}
+.media-player video {
+  width: 800px;
+}
+.media-player .custom-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.media-player .custom-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.media-player .custom-controls button img {
+  width: 24px;
+  height: 24px;
+}
+.media-player .custom-controls .progress-bar {
+  flex-grow: 1;
+  height: 10px;
+  background-color: #555;
+  position: relative;
+}
+.media-player .custom-controls .progress-bar #progress-bar-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #333;
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.txt p {
+  text-indent: 2em;
+}
+.txt .p3 {
+  font-size: 16px;
+}
+.txt .p0 {
+  color: #888888;
+  font-size: 14px;
+}
 
+</style>
 </head>
 
 <body>
@@ -21,9 +120,9 @@
   <nav class="wqw">
     <ul>
       <li><a href="./Assignment 2.html">Home</a></li>
-      <li><a href="javascript:;" onclick="videoonly()">Videos</a></li>
-      <li><a href="javascript:;" onclick="musiconly()">Music</a></li>
-      <li><a href="javascript:;" onclick="listonly()">Playlists</a></li>
+      <li><a href="javascript:;" onClick="videoonly()">Videos</a></li>
+      <li><a href="javascript:;" onClick="musiconly()">Music</a></li>
+      <li><a href="javascript:;" onClick="listonly()">Playlists</a></li>
       <li><a href="./Ideal.html" >Ideal</a></li>
       <!-- Add or remove navigation items as needed -->
     </ul>
@@ -35,9 +134,9 @@
       <div class="video">
         <ul class="uls"> 
           <li><span type="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4">video1</span></li>
-          <li><span type="./media/2.mp4">video2</span></li>
-          <li><span type="./media/1music.mp3">music1</span></li>
-          <li><span type="./media/2music.mp3">music2</span></li>
+          <li><span type="thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4">video2</span></li>
+          <li><span type="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Leapt.mp3">music1</span></li>
+          <li><span type="thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/erokia_ambient-wave-56-msfxp7-78.mp3">music2</span></li>
         </ul>
       </div>
     </div>
@@ -48,11 +147,11 @@
         <source id="video-source" src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4" />
       </video>
       <div class="custom-controls">
-        <button id="Fastbackward" onclick="FastbackwardFn()">
+        <button id="Fastbackward" onClick="FastbackwardFn()">
           <img id="Fastbackward-img" src="./img/Fastbackward.png" alt="Play Button" width="24"
             height="24" />
         </button>
-        <button id="play-btn" onclick="playFn()">
+        <button id="play-btn" onClick="playFn()">
           <img id="play-img" src="./img/play.gif" alt="Play Button" width="24"
             height="24" />
         </button>
@@ -60,7 +159,7 @@
           <img id="play-pause-img" src="./img/pause.gif" alt="Play Button" width="24"
             height="24" />
         </button>
-        <button id="Fastforward-btn" onclick="FastforwardFn()">
+        <button id="Fastforward-btn" onClick="FastforwardFn()">
           <img id="Fastforward-img" src="./img/Fastforward.png" alt="Play Button" width="24"
             height="24" />
         </button>
@@ -68,11 +167,11 @@
         <div class="progress-bar">
           <span id="progress-bar-fill"></span>
         </div>
-        <button id="rest-btn" onclick="restFn()">
+        <button id="rest-btn" onClick="restFn()">
           <img id="rest-img" src="./img/rest.png" alt="Play Button" width="24"
             height="24" />
         </button>
-        <button id="audio-btn" onclick="TurnOnsound()">
+        <button id="audio-btn" onClick="TurnOnsound()">
           <img id="audio-img" src="./img/audio.gif" alt="Play Button" width="24"
             height="24" />
         </button>
@@ -80,7 +179,7 @@
           <img id="no-audio-img" src="./img/no-audio-90.png" alt="Play Button" width="24"
             height="24" />
         </button>
-        <button id="full-screen" onclick="FullscreenFn()">
+        <button id="full-screen" onClick="FullscreenFn()">
           <img id="full-screen" src="./img/full-screen.png" alt="Play Button" width="24"
             height="24" />
         </button>
@@ -89,8 +188,95 @@
 
 
   </main>
+<script type="text/javascript" language="JavaScript">
+// 获取视频播放器元素
+var video = document.getElementById('custom-video-player');
+video.controls = false;
+ 
+function playFn() {
+    video.play();
+    document.querySelector('#play-btn').className = 'none'
+    document.querySelector('#play-pause-btn').className = 'block'
+}
+ 
+function pauseFn() {
+    video.pause();
+    document.querySelector('#play-btn').className = 'block'
+    document.querySelector('#play-pause-btn').className = 'none'
+}
+ 
+function FastbackwardFn() {
+    video.currentTime -= 10;
+}
+ 
+function FastforwardFn() {
+    video.currentTime += 10;
+} 
+function restFn() {
+    video.currentTime = 0;
+    pauseFn();  
+}
+ 
+function TurnOnsound() {
+    video.muted = true;
+    document.querySelector('#audio-btn').className = 'none'
+    document.querySelector('#no-audio-btn').className = 'block'
+}
+ 
+function Soundoff() {
+    video.muted = false;
+    document.querySelector('#audio-btn').className = 'block'
+    document.querySelector('#no-audio-btn').className = 'none'
+}
+ 
+function FullscreenFn() {
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) { // 兼容火狐
+        video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) { // 兼容Chrome和Safari
+        video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { // 兼容IE11
+        video.msRequestFullscreen();
+    }
+}
 
-  <script src="./js/script.js" defer></script>
+ 
+function updateProgressBar() {
+    var progressBar = document.getElementById('progress-bar-fill');
+    var currentTime = video.currentTime;
+    var duration = video.duration;
+    var percentage = (currentTime / duration) * 100;
+    progressBar.style.width = percentage + '%';
+}
+ 
+video.addEventListener('timeupdate', updateProgressBar);
+
+function videoonly() {
+    document.querySelector('.uls').innerHTML = `  <li><span type="thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4">video2</span></li>`
+}
+function musiconly() {
+    document.querySelector('.uls').innerHTML = ` <li><span type="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Leapt.mp3"> music1</span></li>
+    <li><span type="thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/erokia_ambient-wave-56-msfxp7-78.mp3"> music2</span></li>`
+}
+function listonly() {
+    document.querySelector('.uls').innerHTML = `     <li><span type="thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4">video2</span></li>
+    <li><span type="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Leapt.mp3"> music1</span></li>
+    <li><span type="thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/erokia_ambient-wave-56-msfxp7-78.mp3"> music2</span></li>`
+}
+ 
+var ul = document.querySelector('.uls');
+ul.addEventListener('click', function (event) {
+    if (event.target.tagName === 'SPAN') { 
+        var content = event.target.getAttribute('type');
+ 
+        video.src = content
+        pauseFn(); 
+    }
+});
+
+
+</script>
 </body>
 
 </html>
